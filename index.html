@@ -23,11 +23,28 @@
 			<div class="contain">
 				<div class="input-container">
 					<input
+						class="inputs"
 						type="text"
 						id="task-input"
 						placeholder="Enter a task"
 					/>
+					<input
+						class="inputs"
+						type="text"
+						id="category-input"
+						placeholder="Enter Category"
+					/>
+					<select
+						class="inputs"
+						id="priority-input"
+					>
+						<option value="low">Low</option>
+						<option value="medium">Medium</option>
+						<option value="high">High</option>
+					</select>
 					<button id="save-button">Save</button>
+					<h2 style="text-align: center">Filters</h2>
+					<div id="filters"></div>
 				</div>
 				<div id="task-list"></div>
 			</div>

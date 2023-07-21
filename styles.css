@@ -40,7 +40,7 @@ body {
 	margin-bottom: 20px;
 }
 
-#task-input {
+.inputs {
 	flex-grow: 1;
 	padding: 1rem;
 	border: none;
@@ -48,10 +48,10 @@ body {
 	font-size: 16px;
 	background-color: #f2f2f2;
 }
-#task-input:focus {
+.inputs:focus {
 	outline: 2px solid #3f51b5;
 }
-#task-input:focus ~ #save-button {
+.inputs:focus ~ #save-button {
 	outline: 2px solid #3f51b5;
 }
 
@@ -69,6 +69,18 @@ body {
 #save-button:hover {
 	background-color: #2c387e;
 }
+#filters {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+.selectFilter {
+	padding: 1rem;
+	border: none;
+	border-radius: 0.5rem;
+	font-size: 16px;
+	background-color: #f2f2f2;
+}
 
 #task-list {
 	overflow-y: scroll;
@@ -81,12 +93,12 @@ body {
 	margin: 0;
 }
 #task-list::-webkit-scrollbar {
-	width: 15px;
+	width: 10px;
 	height: 15px;
 }
 
 #task-list::-webkit-scrollbar-track-piece {
-	background-color: #c2d2e4;
+	background-color: #c2d2e424;
 }
 
 #task-list::-webkit-scrollbar-thumb:vertical {
@@ -104,7 +116,13 @@ body {
 	background-color: #e8eaf6;
 	transition: background-color 0.3s ease;
 }
-
+.task-edit {
+	padding: 1rem;
+	border: none;
+	border-radius: 0.5rem;
+	font-size: 16px;
+	background-color: #f2f2f2;
+}
 .task-item:last-child {
 	margin-bottom: 0;
 }
@@ -112,7 +130,10 @@ body {
 .task-item:hover {
 	background-color: #d2d5f3;
 }
-
+.task-status {
+	margin-right: 1rem;
+	accent-color: #ff5722;
+}
 .task-text {
 	flex-grow: 1;
 	font-size: 16px;
@@ -146,15 +167,5 @@ body {
 	}
 	.input-container {
 		flex: none;
-		flex-direction: row;
-		gap: 0;
-	}
-	#task-input {
-		border-top-right-radius: 0;
-		border-bottom-right-radius: 0;
-	}
-	#save-button {
-		border-top-left-radius: 0;
-		border-bottom-left-radius: 0;
 	}
 }
